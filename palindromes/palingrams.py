@@ -1,6 +1,6 @@
 import words_loader
 
-words = words_loader.load('words.txt')
+words = set(words_loader.load('words.txt'))
 
 
 def find_palingrams():
