@@ -6,7 +6,7 @@ words = set(words_loader.load('words.txt'))
 def find_palingrams():
     palingrams = []
     for word in words:
-        end = len(words)
+        end = len(word)
         word_rev = word[::-1]
         if end > 1:
             for i in range(end):
