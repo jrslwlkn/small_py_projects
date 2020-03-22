@@ -3,7 +3,7 @@ import words_loader
 words = words_loader.load('words.txt')
 anagrams = []
 
-name = 'Yarek'
+name = str(input('Enter a name to find anagrams: '))
 print('{} is the name.'.format(name))
 name = name.lower()
 
@@ -14,4 +14,7 @@ for word in words:
         if name_lst == sorted(word):
             anagrams.append(word)
 
-print(anagrams, sep='\n')
+if len(anagrams):
+    print('Here are the found anagrams:\n{}'.format(*anagrams), sep='\n')
+else:
+    print('Oops, your name must be quite unique!')
